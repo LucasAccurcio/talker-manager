@@ -1,10 +1,6 @@
-const crypto = require('crypto');
+const generateToken = require('./tokenGenerate');
 
-function generateToken() {
-  return crypto.randomBytes(8).toString('hex');
-}
-
-module.exports = (req, res) => {
+module.exports = (_req, res) => {
   const token = generateToken();
 
   res.status(200).json({ token });
