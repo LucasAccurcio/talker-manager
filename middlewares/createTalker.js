@@ -1,15 +1,15 @@
 const fs = require('fs');
 
 module.exports = (req, res) => {
-  const { name, age, watchedAt, rate } = req.body;
-  const { authorization } = req.headers;
-  console.log(authorization);
+  const { name, age, talk } = req.body;
+  const { watchedAt, rate } = talk;
+
   const talkers = JSON.parse(fs.readFileSync('./talker.json', 'utf-8'));
 
   const newObj = {
     name,
     age,
-    id: talkers.length.toString(),
+    id: talkers.length + 1,
     talk: {
       watchedAt,
       rate,
