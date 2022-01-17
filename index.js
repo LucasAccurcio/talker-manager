@@ -20,6 +20,7 @@ const talkValidation = require('./middlewares/talkValidation');
 const dateAndRateValidation = require('./middlewares/dateAndRateValidation');
 const updateTalker = require('./middlewares/updateTalker');
 const deleteTalker = require('./middlewares/deleteTalker');
+const searchTalker = require('./middlewares/searchTalker');
 
 // não remova esse endpoint, e para o avaliador funcionar
 app.get('/', (_request, response) => {
@@ -29,6 +30,10 @@ app.get('/', (_request, response) => {
 app.get('/talker', talker);
 
 app.get('/talker/:id', talkerId);
+
+app.get('/talker/search/:searchTerm',
+authMiddleware,
+searchTalker);
 
 app.post('/login',
 emailValidation,
