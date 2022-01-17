@@ -29,11 +29,11 @@ app.get('/', (_request, response) => {
 
 app.get('/talker', talker);
 
-app.get('/talker/:id', talkerId);
-
-app.get('/talker/search/:searchTerm',
+app.get('/talker/search',
 authMiddleware,
-searchTalker);
+searchTalker); // PRECISA ACRESCENTAR O MIDDLEWARE!!!!!!!
+
+app.get('/talker/:id', talkerId);
 
 app.post('/login',
 emailValidation,
