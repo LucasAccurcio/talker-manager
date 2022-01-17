@@ -50,6 +50,10 @@ talkValidation,
 dateAndRateValidation,
 updateTalker);
 
+app.delete('/talker/:id',
+authMiddleware,
+);
+
 app.listen(PORT, () => {
   console.log('Online');
 });
