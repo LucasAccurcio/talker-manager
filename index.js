@@ -31,7 +31,7 @@ app.get('/talker', talker);
 
 app.get('/talker/search',
 authMiddleware,
-searchTalker); // PRECISA ACRESCENTAR O MIDDLEWARE!!!!!!!
+searchTalker);
 
 app.get('/talker/:id', talkerId);
 
