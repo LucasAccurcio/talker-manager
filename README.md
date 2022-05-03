@@ -44,5 +44,6 @@ Neste projeto, desenvolvemos as seguintes habilidades:
 
 5. Acesse um endpoint para verificar seu funcionamento:
   - Exemplo:
-  > http://localhost:3000/talker
-  > Esse endpoint irá retornar a lista das pessoas palestrantes, constante no arquivo talker.json utilizado nesse projeto.
+    > http://localhost:3000/talker
+  
+    > Esse endpoint irá retornar a lista das pessoas palestrantes, constante no arquivo talker.json utilizado nesse projeto.
